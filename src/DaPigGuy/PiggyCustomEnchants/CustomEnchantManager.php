@@ -117,7 +117,7 @@ class CustomEnchantManager
         self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::BACKSTAB, "Backstab", function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->getDirectionVector()->dot($event->getEntity()->getDirectionVector()) > 0;
         }, CustomEnchant::RARITY_UNCOMMON));
-        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::CHARGE, "Charge", function (EntityDamageByEntityEvent $event) {
+        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::CHARGEATTACK, "ChargeAttack", function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->isSprinting();
         }, CustomEnchant::RARITY_UNCOMMON));
 
