@@ -119,7 +119,7 @@ class CustomEnchantIds
     const FORCEFIELD = 418;
     const OVERLOAD = 419;
     const RADIANTDEFENCE = 420;
-    const RADIANTTANK = 421;
+    const TANK = 421;
     const HEAVY = 422;
     const SHIELDED = 423;
     const POISONOUSCLOUD = 424;
