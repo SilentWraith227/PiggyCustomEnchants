@@ -35,7 +35,7 @@ class ArmoredEnchant extends ReactiveEnchantment
             $damager = $event->getDamager();
             if ($damager instanceof Player) {
                 if ($damager->getInventory()->getItemInHand() instanceof Sword) {
-                    $event->setModifier(-($event->getFinalDamage() * $this->extraData["absorbedDamageMultiplier"] * $level), CustomEnchantIds::ARMORED);
+                    $event->setModifier(-($event->getFinalDamage() * $this->extraData["absorbedDamageMultiplier"] * $level), CustomEnchantIds::RADIANTARMORED);
                 }
             }
         }
