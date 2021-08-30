@@ -68,7 +68,7 @@ use DaPigGuy\PiggyCustomEnchants\enchants\weapons\bows\ProjectileChangingEnchant
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\bows\ShuffleEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\bows\VolleyEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\ConditionalDamageMultiplierEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\DeathbringerEnchant;
+use DaPigGuy\PiggyCustomEnchants\enchants\weapons\RadiantDamageEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\DeepWoundsEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\DisarmingEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\DisarmorEnchant;
@@ -111,13 +111,13 @@ class CustomEnchantManager
         self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::POISONED, "Poisoned", [Effect::POISON], [60], [1], CustomEnchant::RARITY_UNCOMMON));
         self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::REVULSION, "Revulsion", [Effect::NAUSEA], [20], [0], CustomEnchant::RARITY_UNCOMMON));
 
-        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::AERIAL, "Aerial", function (EntityDamageByEntityEvent $event) {
+        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::AIRATTACK, "AirAttack", function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->isOnGround();
         }, CustomEnchant::RARITY_COMMON));
         self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::BACKSTAB, "Backstab", function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->getDirectionVector()->dot($event->getEntity()->getDirectionVector()) > 0;
         }, CustomEnchant::RARITY_UNCOMMON));
-        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::CHARGE, "Charge", function (EntityDamageByEntityEvent $event) {
+        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::DAMAGE, "Damage" function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->isSprinting();
         }, CustomEnchant::RARITY_UNCOMMON));
 
