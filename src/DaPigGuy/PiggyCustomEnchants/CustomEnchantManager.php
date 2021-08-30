@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace DaPigGuy\PiggyCustomEnchants;
 
 use DaPigGuy\PiggyCustomEnchants\enchants\armor\AntiKnockbackEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\ArmoredEnchant;
+use DaPigGuy\PiggyCustomEnchants\enchants\armor\RadiantArmoredEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\armor\AttackerDeterrentEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\armor\BerserkerEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\armor\boots\JetpackEnchant;
@@ -68,8 +68,8 @@ use DaPigGuy\PiggyCustomEnchants\enchants\weapons\bows\ProjectileChangingEnchant
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\bows\ShuffleEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\bows\VolleyEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\ConditionalDamageMultiplierEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\DeathbringerEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\DeepWoundsEnchant;
+use DaPigGuy\PiggyCustomEnchants\enchants\weapons\DamageEnchant;
+use DaPigGuy\PiggyCustomEnchants\enchants\weapons\BleedingEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\DisarmingEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\DisarmorEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\GooeyEnchant;
@@ -143,7 +143,7 @@ class CustomEnchantManager
         self::registerEnchantment(new AntitoxinEnchant($plugin, CustomEnchantIds::ANTITOXIN));
         self::registerEnchantment(new AutoAimEnchant($plugin, CustomEnchantIds::AUTOAIM));
         self::registerEnchantment(new AutoRepairEnchant($plugin, CustomEnchantIds::AUTOREPAIR));
-        self::registerEnchantment(new ArmoredEnchant($plugin, CustomEnchantIds::ARMORED));
+        self::registerEnchantment(new ArmoredEnchant($plugin, CustomEnchantIds::RADIANTARMORED));
         self::registerEnchantment(new BerserkerEnchant($plugin, CustomEnchantIds::BERSERKER));
         self::registerEnchantment(new BlessedEnchant($plugin, CustomEnchantIds::BLESSED));
         self::registerEnchantment(new BombardmentEnchant($plugin, CustomEnchantIds::BOMBARDMENT));
@@ -151,8 +151,8 @@ class CustomEnchantManager
         self::registerEnchantment(new CactusEnchant($plugin, CustomEnchantIds::CACTUS));
         self::registerEnchantment(new ChickenEnchant($plugin, CustomEnchantIds::CHICKEN));
         self::registerEnchantment(new CloakingEnchant($plugin, CustomEnchantIds::CLOAKING));
-        self::registerEnchantment(new DeathbringerEnchant($plugin, CustomEnchantIds::DEATHBRINGER));
-        self::registerEnchantment(new DeepWoundsEnchant($plugin, CustomEnchantIds::DEEPWOUNDS));
+        self::registerEnchantment(new DeathbringerEnchant($plugin, CustomEnchantIds::DAMAGE));
+        self::registerEnchantment(new DeepWoundsEnchant($plugin, CustomEnchantIds::BLEEDING));
         self::registerEnchantment(new DisarmingEnchant($plugin, CustomEnchantIds::DISARMING));
         self::registerEnchantment(new DisarmorEnchant($plugin, CustomEnchantIds::DISARMOR));
         self::registerEnchantment(new DrillerEnchant($plugin, CustomEnchantIds::DRILLER));
@@ -201,7 +201,7 @@ class CustomEnchantManager
         self::registerEnchantment(new SoulboundEnchant($plugin, CustomEnchantIds::SOULBOUND));
         self::registerEnchantment(new SpiderEnchant($plugin, CustomEnchantIds::SPIDER));
         self::registerEnchantment(new StompEnchantment($plugin, CustomEnchantIds::STOMP));
-        self::registerEnchantment(new TankEnchant($plugin, CustomEnchantIds::TANK));
+        self::registerEnchantment(new TankEnchant($plugin, CustomEnchantIds::RADIANTTANK));
         self::registerEnchantment(new TelepathyEnchant($plugin, CustomEnchantIds::TELEPATHY));
         self::registerEnchantment(new VacuumEnchant($plugin, CustomEnchantIds::VACUUM));
         self::registerEnchantment(new VampireEnchant($plugin, CustomEnchantIds::VAMPIRE));
