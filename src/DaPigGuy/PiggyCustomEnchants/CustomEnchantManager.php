@@ -111,10 +111,10 @@ class CustomEnchantManager
         self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::POISONED, "Poisoned", [Effect::POISON], [60], [1], CustomEnchant::RARITY_UNCOMMON));
         self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::REVULSION, "Revulsion", [Effect::NAUSEA], [20], [0], CustomEnchant::RARITY_UNCOMMON));
 
-        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::AERIAL, "Aerial", function (EntityDamageByEntityEvent $event) {
+        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::AIRATTACK, "Air Attack", function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->isOnGround();
         }, CustomEnchant::RARITY_COMMON));
-        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::BACKSTAB, "Backstab", function (EntityDamageByEntityEvent $event) {
+        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::BACKDAMAGE, "Backdamage", function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->getDirectionVector()->dot($event->getEntity()->getDirectionVector()) > 0;
         }, CustomEnchant::RARITY_UNCOMMON));
         self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::CHARGEATTACK, "ChargeAttack", function (EntityDamageByEntityEvent $event) {
@@ -167,11 +167,11 @@ class CustomEnchantManager
         self::registerEnchantment(new GooeyEnchant($plugin, CustomEnchantIds::GOOEY));
         self::registerEnchantment(new GrapplingEnchant($plugin, CustomEnchantIds::GRAPPLING));
         self::registerEnchantment(new GrowEnchant($plugin, CustomEnchantIds::GROW));
-        self::registerEnchantment(new HallucinationEnchant($plugin, CustomEnchantIds::HALLUCINATION));
+        self::registerEnchantment(new HallucinationEnchant($plugin, CustomEnchantIds::TITANTRAP));
         self::registerEnchantment(new HarvestEnchant($plugin, CustomEnchantIds::HARVEST));
         self::registerEnchantment(new HeadhunterEnchant($plugin, CustomEnchantIds::HEADHUNTER));
         self::registerEnchantment(new HealingEnchant($plugin, CustomEnchantIds::HEALING));
-        self::registerEnchantment(new HeavyEnchant($plugin, CustomEnchantIds::HEAVY));
+        self::registerEnchantment(new HeavyEnchant($plugin, CustomEnchantIds::TANK));
         self::registerEnchantment(new ImplantsEnchant($plugin, CustomEnchantIds::IMPLANTS));
         self::registerEnchantment(new JackpotEnchant($plugin, CustomEnchantIds::JACKPOT));
         self::registerEnchantment(new JetpackEnchant($plugin, CustomEnchantIds::JETPACK));
@@ -194,7 +194,7 @@ class CustomEnchantManager
         self::registerEnchantment(new RadarEnchant($plugin, CustomEnchantIds::RADAR));
         self::registerEnchantment(new ReviveEnchant($plugin, CustomEnchantIds::REVIVE));
         self::registerEnchantment(new SelfDestructEnchant($plugin, CustomEnchantIds::SELFDESTRUCT));
-        self::registerEnchantment(new ShieldedEnchant($plugin, CustomEnchantIds::SHIELDED));
+        self::registerEnchantment(new ShieldedEnchant($plugin, CustomEnchantIds::BURSTHEAL));
         self::registerEnchantment(new ShrinkEnchant($plugin, CustomEnchantIds::SHRINK));
         self::registerEnchantment(new ShuffleEnchant($plugin, CustomEnchantIds::SHUFFLE));
         self::registerEnchantment(new SmeltingEnchant($plugin, CustomEnchantIds::SMELTING));
