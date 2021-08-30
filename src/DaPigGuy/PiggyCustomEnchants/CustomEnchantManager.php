@@ -201,7 +201,7 @@ class CustomEnchantManager
         self::registerEnchantment(new SoulboundEnchant($plugin, CustomEnchantIds::SOULBOUND));
         self::registerEnchantment(new SpiderEnchant($plugin, CustomEnchantIds::SPIDER));
         self::registerEnchantment(new StompEnchantment($plugin, CustomEnchantIds::STOMP));
-        self::registerEnchantment(new TankEnchant($plugin, CustomEnchantIds::TANK));
+        self::registerEnchantment(new TankEnchant($plugin, CustomEnchantIds::DEUTRONOMYTANK));
         self::registerEnchantment(new TelepathyEnchant($plugin, CustomEnchantIds::TELEPATHY));
         self::registerEnchantment(new VacuumEnchant($plugin, CustomEnchantIds::VACUUM));
         self::registerEnchantment(new VampireEnchant($plugin, CustomEnchantIds::VAMPIRE));
